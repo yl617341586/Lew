@@ -1,4 +1,4 @@
-const { basePath } = require("../scripts/util");
+const { basePath } = require("./util");
 const plugins = require("./webpack.plugins");
 const modules = require("./webpack.modules");
 /**
@@ -12,19 +12,20 @@ module.exports = (webpackEnv) => {
     mode: isDevelopment
       ? "development"
       : isProduction
-      ? "production"
-      : "development",
+        ? "production"
+        : "development",
     resolve: {
       alias: {
         "@": basePath("src"),
       },
       extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".scss"],
     },
-    entry: basePath("src/index.js"),
+    devtool: isDevelopment ? 'eval-source-map' : 'source-map',
+    entry: basePath("src"),
     output: {
       path: isProduction ? basePath("build") : undefined,
-      publicPath: "/",
-      filename: isProduction ? "[name].[contenthash:6].js" : "bundle.js",
+      filename: isProduction ? "static/js/[name].[contenthash:6].js" : "bundle.js",
+      chunkFilename: isProduction ? "static/js/[name].[contenthash:6].chunk.js" : "[name].chunk.js",
     },
     module: modules(webpackEnv),
     plugins: plugins(webpackEnv),
