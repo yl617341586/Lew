@@ -1,7 +1,9 @@
-import React from 'react'
-import './App.scss'
-const App = () => {
-    return <div className='app'>App</div>
-}
+import React from 'react';
+import './App.scss';
 
-export default App
+const App = () => {
+  const context = 'App';
+  return <div className="app">{context}</div>;
+};
+
+export default App;
