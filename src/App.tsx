@@ -1,9 +1,6 @@
-import React from 'react';
 import './App.scss';
+import Message from '@/';
 
-const App = () => {
-  const context = 'App';
-  return <div className="app">{context}</div>;
-};
+const App = () => <Message />;
 
 export default App;

@@ -26,11 +26,17 @@ module.exports = (webpackEnv) => {
             options: {
               presets: [
                 '@babel/preset-env',
-                '@babel/preset-react',
+                [
+                  '@babel/preset-react',
+                  {
+                    runtime: 'automatic',
+                  },
+                ],
                 '@babel/preset-typescript',
               ],
             },
           },
+          'ts-loader',
           'eslint-loader',
         ].filter(Boolean),
         exclude: /node_modules/,
