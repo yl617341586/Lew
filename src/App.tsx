@@ -1,5 +1,5 @@
 import './App.scss';
-import Message from '@/';
+import Message from '@/components/message';
 
 const App = () => <Message />;
 

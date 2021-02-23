@@ -8,7 +8,7 @@
 import { FC } from 'react';
 
 const Message:FC = () => (
-  <div>message</div>
+  <div>mes顶顶顶顶sage</div>
 );
 
 export default Message;

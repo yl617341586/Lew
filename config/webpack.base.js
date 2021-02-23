@@ -21,7 +21,7 @@ module.exports = (webpackEnv) => {
     mode: isDevelopment ? 'development' : 'development',
     resolve: {
       alias: {
-        '@': basePath('src/'),
+        '@': basePath('src'),
       },
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.css', '.scss'],
     },

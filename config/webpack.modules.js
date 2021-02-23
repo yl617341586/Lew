@@ -36,7 +36,7 @@ module.exports = (webpackEnv) => {
               ],
             },
           },
-          'ts-loader',
+          // 'ts-loader',
           'eslint-loader',
         ].filter(Boolean),
         exclude: /node_modules/,

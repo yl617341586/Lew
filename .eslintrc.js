@@ -32,6 +32,7 @@ module.exports = {
     'no-use-before-define': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'react/react-in-jsx-scope': 'off',
+    'import/no-unresolved': 'off',
   },
   settings: {
     'import/resolver': {
